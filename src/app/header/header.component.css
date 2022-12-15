@@ -1,0 +1,9 @@
+.cart:hover{
+    color: brown;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container{
+    z-index: 100px;
+    top: 0;
+}
