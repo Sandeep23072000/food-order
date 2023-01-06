@@ -1,9 +1,33 @@
 <div>
-    <ul *ngFor="let item of foods">
+    <ul *ngFor="let items of foods">
         <li>
-            <a>
-                <img src="{{item}}" alt="food image">
+            <a class="image">
+                <img src="{{items.imageUrl}}" alt="food image">
             </a>
+            <div>
+
+            </div>
+            <div class="justify-content-between">
+                <h2 class="ms-5 fw-bold text-danger">{{items.name}}</h2>
+                <span class="me-5"><mat-icon class="favorite {{items.favorite?'':'not'}}">favorite</mat-icon></span>
+            </div>
+            <div>
+                <ngb-rating [max]="5" class="fs-4 ms-5" [readonly]="true" [rate]="items.star    "></ngb-rating>
+            </div>
+            <div class="justify-content-between mt-2 text-secondary">
+                <div class="origins ms-5">
+                    <span *ngFor="let item of items.origins">
+                        {{item}}
+                    </span>
+                </div>
+                <div class="cook-time me-5">
+                    🕑 : {{items.cookTime}} Min.
+                </div>
+            </div>
+            <div class="price ms-5 mt-2 fs-6">
+                {{items.price | currency}}
+            </div>
+
         </li>
     </ul>
 </div>
