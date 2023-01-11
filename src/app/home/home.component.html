@@ -1,3 +1,4 @@
+<app-search></app-search>
 <div>
     <ul *ngFor="let items of foods">
         <li>
@@ -17,7 +18,7 @@
             <div class="justify-content-between mt-2 text-secondary">
                 <div class="origins ms-5">
                     <span *ngFor="let item of items.origins">
-                        {{item}}
+                        {{item}},
                     </span>
                 </div>
                 <div class="cook-time me-5">

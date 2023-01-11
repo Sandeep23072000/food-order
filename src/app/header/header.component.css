@@ -1,9 +1,8 @@
-.cart:hover{
-    color: brown;
-    cursor: pointer;
+li a{
+    color: white;
+}
+li a:hover{
+    color: rgb(38, 34, 38);
     font-weight: bold;
 }
-.container{
-    z-index: 100;
-    top: 0;
-}
+
